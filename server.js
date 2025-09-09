@@ -15,6 +15,7 @@ const passUserToView = require("./middleware/pass-user-to-view.js");
 
 // Controllers
 const authController = require("./controllers/auth.js");
+const toolboxController = require("./controllers/toolbox.js");
 
 // More Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -44,6 +45,7 @@ app.use(passUserToView);
 app.use("/auth", authController);
 app.use(isSignedIn);
 
+app.us("/toolbox", toolboxController);
 
 
 db.on("connected", () => {

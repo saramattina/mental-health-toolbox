@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title><%= userTool.tool.name %></title>
+</head>
+<body>
+   <%- include("../partials/_navbar.ejs") %>
+
+   <h1><%= userTool.tool.name %></h1>
+
+   <!-- <% if (userTool.tool.link) { %>
+      <a href="<%= userTool.tool.link %>" target="_blank">Link</a>
+      <% } %>
+
+      <% if (userTool.tool.description) { %>
+         <p>Description: <%= userTool.tool.description %></p>
+      <% } %> -->
+
+   <p> <%= userTool.tool.populate() %> </p>   
+
+   <% if (userTool.note) { %>
+      <p>Notes: <%= userTool.note %></p>
+   <% } %>
+
+</body>
+</html>

@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Toolbox</title>
-</head>
-<body>
-   <h1>My Toolbox</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Toolbox</title>
+  </head>
+  <body>
+   <%- include("../partials/_navbar.ejs") %>
+    <h1>My Toolbox</h1>
 
-
-</body>
+    <ul>
+      <% tools.forEach(tool => { %>
+      <li>
+        <a href="<%= tool._id %>">
+          <p><%= tool.name %></p>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+    
+  </body>
 </html>

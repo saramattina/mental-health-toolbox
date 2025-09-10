@@ -1,0 +1,11 @@
+<nav>
+   <% if (user) { %>
+      <a href="/toolbox">My Toolbox</a>
+      <a href="/toolbox/new">Add New Tool</a>
+      <a href="/resources">Resources</a>
+      <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+      <a href="/auth/sign-in">Sign In</a>
+      <a href="/auth/sign-up">Sign Up</a>
+   <% } %>
+</nav>

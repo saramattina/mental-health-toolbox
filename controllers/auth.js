@@ -20,6 +20,7 @@ router.get("/sign-out", (req, res) => {
 
 router.post("/sign-up", async (req, res) => {
    try {
+      console.log("Yooooooo")
       const userInDatabase = await User.findOne({ username: req.body.username});
       if (userInDatabase) {
          return res.send("Username is already taken. Please try again.");
@@ -57,11 +58,11 @@ router.post("/sign-in", async (req, res) => {
          username: userInDatabase.username,
          _id: userInDatabase._id,
       };
-
-      res.redirect("/");
+      console.log("User: ", req.session.user);
+      res.redirect("/toolbox");
 
    } catch (error) {
-      console.log(error);
+      console.log("Error: ", error);
       res.redirect("/");
    }
 })

@@ -8,6 +8,7 @@ const toolSchema = new mongoose.Schema({
    description: String, 
    link: String,
    emotions: [{ type: mongoose.Schema.Types.ObjectId, ref: "Emotion" }],
+   reference: String, 
 })
 
 const Tool = mongoose.model("Tool", toolSchema);

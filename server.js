@@ -1,10 +1,12 @@
 const dotenv = require('dotenv');
 dotenv.config();
 const express = require("express");
+const session = require("express-session");
 const app = express();
 const methodOverride = require("method-override");
-const session = require("express-session");
 const path = require("path");
+const morgan = require("morgan");
+
 
 const db = require("./db/connection");
 const port = process.env.PORT || 3000;
@@ -21,6 +23,7 @@ const toolboxController = require("./controllers/toolbox.js");
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(morgan("dev"));
 
 // Authentication
 app.use(
@@ -45,7 +48,11 @@ app.use(passUserToView);
 app.use("/auth", authController);
 app.use(isSignedIn);
 
-app.us("/toolbox", toolboxController);
+app.use("/toolbox", toolboxController);
+
+app.get("/resources", (req, res) => {
+   res.render("resources.ejs");
+})
 
 
 db.on("connected", () => {

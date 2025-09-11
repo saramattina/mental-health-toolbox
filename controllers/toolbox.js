@@ -21,6 +21,7 @@ router.get("/myTools", async (req, res) => {
    try {
       const userTools = await UserTool.find({ user: req.session.user._id })
          .populate("tool");
+         console.log("All userTools:", userTools);
       res.render("toolbox/index.ejs", { userTools });
    } catch (error) {
       console.log(error);
@@ -35,8 +36,12 @@ router.get("/myTools/:userToolId", async (req, res) => {
          user: req.session.user._id,
       }).populate("tool");
 
-      if (!userTool) return res.redirect("/toolbox/myTools");
-
+      console.log("Tool name:", userTool)
+      if (!userTool) {
+         console.log("usertool not found")
+         return res.redirect("/toolbox/myTools")};
+      console.log("UserTool fetched:", userTool);
+      console.log("session user:", req.session.user);
       res.render("toolbox/show.ejs", { userTool });
    } catch (error) {
       console.log(error);
@@ -48,7 +53,6 @@ router.get("/myTools/:userToolId", async (req, res) => {
 router.get("/:toolId", async (req, res) => {
    try {
       const toolData = await Tool.findById(req.params.toolId);
-      console.log("tool:", toolData);
       res.render("tools/show.ejs", { tool: toolData });
    } catch (error) {
       console.log(error);
@@ -82,11 +86,3 @@ router.post("/:toolId", async (req, res) => {
 
 
 module.exports = router;
-
-
-
-
-
-
-
-

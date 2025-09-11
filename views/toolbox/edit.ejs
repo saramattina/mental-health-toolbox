@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Edit Tool - Toolbox</title>
+</head>
+<body>
+   <%- include("../partials/_navbar.ejs") %>
+
+   <h1>Edit <%= userTool.tool.name %></h1>
+
+   <h1><%= userTool.tool.name %></h1>
+
+    <% if (userTool.tool.description) { %>
+    <p><%= userTool.tool.description %></p>
+    <% } else { %>
+    <p><em>No description available</em></p>
+    <% } %> 
+    
+    <% if (userTool.tool.link) { %>
+    <p>
+      <a href="<%= userTool.tool.link %>" target="_blank">More Info</a>
+    </p>
+    <% } %> 
+    
+    <% if (userTool.tool.reference) { %>
+    <a href="<%= userTool.tool.reference %>" target="_blank">Reference</a>
+    <% } %>
+
+
+<form action="/toolbox/myTools/<%= userTool._id %>?_method=PUT" method="POST">
+      <label for="note">Notes:</label>
+      <textarea name="note" id="note" rows="3"><%= userTool.note %></textarea>
+      <button type="submit">Update</button>
+    </form>
+
+
+</body>
+</html>

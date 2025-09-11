@@ -6,16 +6,15 @@
     <title>My Toolbox</title>
   </head>
   <body>
-   <%- include("../partials/_navbar.ejs") %>
+    <%- include("../partials/_navbar.ejs") %>
     <h1>Tools</h1>
 
     <ul>
       <% tools.forEach(tool => { %>
-        <li>
-          <a href="/toolbox/<%= tool._id %>"><%= tool.name %></a>
-        </li>
+      <li>
+        <a href="/toolbox/<%= tool._id %>"><%= tool.name %></a>
+      </li>
       <% }) %>
     </ul>
-    
   </body>
 </html>

@@ -6,6 +6,19 @@
    <title>My Toolbox</title>
 </head>
 <body>
+   <%- include("../partials/_navbar.ejs") %>
+
+   <h1>My Toolbox</h1>
+
+   <ul>
+      <% userTools.forEach(userTool => { %>
+         <li>
+            <a href="/toolbox/myTools/<%= userTool.tool._id %>"><%= userTool.tool.name %></a>
+         </li>
+      <% }) %>
+   </ul>
+
+
    
 </body>
 </html>

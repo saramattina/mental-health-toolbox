@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toolbox</title>
+  </head>
+  <body>
+    <%- include("../partials/_navbar.ejs") %>
+
+    <h1><%= username.tool.name %></h1>
+
+    <% if (username.tool.description) { %>
+    <p><%= username.tool.description %></p>
+    <% } else { %>
+    <p><em>No description available</em></p>
+    <% } %> <% if (username.tool.link) { %>
+    <p>
+      <a href="<%= username.tool.link %>" target="_blank"> Visit Link </a>
+    </p>
+    <% } %> <% if (username.tool.reference) { %>
+    <a href="<%= username.tool.reference %>" target="_blank"> Reference</a>
+    <% } %>
+
+ <!-- add delete button -->
+
+  </body>
+</html>

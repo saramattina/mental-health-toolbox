@@ -20,6 +20,7 @@ const authController = require("./controllers/auth.js");
 const toolboxController = require("./controllers/toolbox.js");
 
 // More Middleware
+
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -30,7 +31,7 @@ app.use(
    session({
       secret: process.env.SESSION_SECRET,
       resave: false,
-      saveUninitalized: true,
+      saveUninitialized: true,
    })
 );
 
@@ -38,16 +39,15 @@ app.use(passUserToView);
 
 app.get("/", (req, res) => {
    if (req.session.user) {
-      res.redirect("/toolbox");
+      res.redirect("/toolbox/myTools");
    } else {
       res.render("index.ejs");
    }
 })
 
-app.use(passUserToView);
+
 app.use("/auth", authController);
 app.use(isSignedIn);
-
 app.use("/toolbox", toolboxController);
 
 app.get("/resources", (req, res) => {

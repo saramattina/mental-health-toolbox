@@ -18,22 +18,27 @@
     
     <% if (userTool.tool.link) { %>
     <p>
-      <a href="<%= userTool.tool.link %>" target="_blank">More Info</a>
+      <a href="<%= userTool.tool.link %>" target="_blank"><button>More Info</button></a>
     </p>
     <% } %> 
     
     <% if (userTool.tool.reference) { %>
-    <a href="<%= userTool.tool.reference %>" target="_blank">Reference</a>
+    <a href="<%= userTool.tool.reference %>" target="_blank"><button>Reference</button></a>
     <% } %>
 
     <% if (userTool.note) { %>
       <p>Notes: <%= userTool.note %></p>
       <% } %>
 
-      <!-- edit button -->
-      <a href="/toolbox/myTools/<%= userTool._id %>/edit">Edit Tool</a>
- <!-- add delete button -->
- <a href="/toolbox/myTools/<%= userTool._id %>/delete">Delete Tool</a>
+
+      <a href="/toolbox/myTools/<%= userTool._id %>/edit">
+         <button>Edit Tool</button>
+      </a>
+
+ 
+   <form action="/toolbox/myTools/<%= userTool._id %>?_method=DELETE" method="POST">
+         <button type="submit">Remove Tool</button>
+      </form>
 
   </body>
 </html>

@@ -79,6 +79,25 @@ router.put("/myTools/:userToolId", async (req, res) => {
    }
 });
 
+router.delete("/myTools/:userToolId", async (req, res) => { 
+   try {
+      const userTool = await UserTool.findOne({
+         _id: req.params.userToolId,
+         user: req.session.user._id,
+      });
+
+      await userTool.deleteOne();
+    
+      // await userTool.save();
+
+      res.redirect(`/toolbox/myTools`);
+
+   } catch (error) {
+      console.log(error);
+      res.redirect("/toolbox/myTools");
+   }
+})
+
 router.get("/:toolId", async (req, res) => {
    try {
       const toolData = await Tool.findById(req.params.toolId);

@@ -46,13 +46,16 @@ app.get("/", (req, res) => {
 })
 
 
+app.get("/resources", (req, res) => {
+   res.render("resources.ejs");
+})
+
+
 app.use("/auth", authController);
 app.use(isSignedIn);
 app.use("/toolbox", toolboxController);
 
-app.get("/resources", (req, res) => {
-   res.render("resources.ejs");
-})
+
 
 
 db.on("connected", () => {

@@ -15,28 +15,27 @@ a:hover {
 }
 
 nav {
-   text-align: right;
-   padding: 15px;
-   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -50px;
- }
+  text-align: right;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 nav img {
-   height: 10vh;
-   border-radius: 8px;
- }
+  height: 10vh;
+  border-radius: 8px;
+}
 
- .nav-title {
-   display: flex;
-   align-items: center;
- }
+.nav-title {
+  display: flex;
+  align-items: center;
+}
 
- nav p {
-   padding-left: 20px;
-   font-size: 35px;
- }
+nav p {
+  padding-left: 20px;
+  font-size: 35px;
+}
 
 input {
   background-color: white;
@@ -45,7 +44,7 @@ input {
 
 nav a {
   display: inline;
-  margin: 50px 10px;
+  margin: 10px;
   font-size: 20px;
 }
 
@@ -60,6 +59,7 @@ nav a:hover {
   left: 0;
   width: 100%;
   padding: 10px;
+  font-size: 20px;
 }
 
 .home-page {
@@ -86,17 +86,17 @@ nav a:hover {
 .page-title {
   font-size: 65px;
   align-items: center;
-  margin: 50px auto 60px auto;
+  margin: 50px auto 30px auto;
   display: flex;
   justify-content: center;
 }
 
 .auth-title {
-   align-items: center;
+  align-items: center;
   margin: 50px auto 60px auto;
   display: flex;
   justify-content: center;
-  font-size:45px;
+  font-size: 45px;
 }
 
 .auth-form {
@@ -109,12 +109,12 @@ nav a:hover {
 }
 
 .auth-btn {
-   margin-left: 25px;
-   font-size: 20px;
+  margin-left: 25px;
+  font-size: 20px;
 }
 
 form label {
-   margin-left:15px;
+  margin-left: 15px;
 }
 
 .tools {
@@ -122,7 +122,6 @@ form label {
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .tool-item {
@@ -158,7 +157,7 @@ form label {
 }
 
 .helplines a:hover {
- color: #987284
+  color: #987284;
 }
 
 .helpline-name {
@@ -171,6 +170,7 @@ form label {
   flex-direction: column;
   align-items: center;
   margin-right: 15%;
+
 }
 
 .tool-info {
@@ -184,16 +184,18 @@ form label {
 }
 
 .tool-btn,
-.update-btn, .auth-btn {
+.update-btn,
+.auth-btn {
   padding: 7px;
   margin-top: 35px;
   background-color: #d29074;
-  font-size: 17px;
+  font-size: 20px;
   border-radius: 8px;
 }
 
 .tool-btn:hover,
-.update-btn:hover, .auth-btn:hover {
+.update-btn:hover,
+.auth-btn:hover {
   background-color: #987284;
   cursor: pointer;
 }

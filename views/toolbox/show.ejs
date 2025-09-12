@@ -39,6 +39,12 @@
       </p>
       <% } %>
 
+      <% if (userTool.tool.reference) { %>
+        <a href="<%= userTool.tool.reference %>" target="_blank"
+          ><button class="tool-btn">Reference</button></a
+        >
+        <% } %>
+
       <a href="/toolbox/myTools/<%= userTool._id %>/edit">
         <button class="tool-btn">Edit Tool</button>
       </a>
@@ -49,11 +55,6 @@
         <button type="submit" class="tool-btn">Remove Tool</button>
       </form>
 
-      <% if (userTool.tool.reference) { %>
-      <a href="<%= userTool.tool.reference %>" target="_blank"
-        ><button class="tool-btn">Reference</button></a
-      >
-      <% } %>
     </div>
   </div>
 

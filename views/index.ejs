@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>MH ToolBox</title>
-</head>
-<body>
-   <%- include("./partials/_navbar.ejs") %>
-   <h1>Welcome to the MH Toolbox</h1>
-   <h4>An Online Coping Strategy Resource</h4>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
+    <title>MH ToolBox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/_navbar.ejs") %>
 
-   <p>If you are experiencing an emergency, please call 911 or go to the nearest emergency room</p>
+    <div class="home-page">
+      <h1 class="home-title">Welcome to the MH Toolbox</h1>
+      <h4 class="home-subtitle">Caring for Yourself, One Tool at a Time</h4>
 
-</body>
+    <img src="https://www.shutterstock.com/image-illustration/blue-open-suitcase-tools-solid-600nw-2033333936.jpg" alt="toolbox" class="home-img"/>
+   </div>
+
+    <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the nearest
+      emergency room
+    </p>
+ 
+
+
+  </body>
 </html>

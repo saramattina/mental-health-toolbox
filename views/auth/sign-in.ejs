@@ -3,11 +3,26 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+     rel="stylesheet"
+   />
    <title>Sign In - Toolbox</title>
+   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
-   <h1>Sign In</h1>
+   <nav>
+      <div class="nav-title">
+         <img src="https://st4.depositphotos.com/20838724/22972/v/450/depositphotos_229727546-stock-illustration-mental-health-line-icon-outline.jpg" alt="head outline" />
+         <p>MH Toolbox</p>
+      </div>
+   </nav>
 
+   <h1 class="auth-title">Sign In</h1>
+
+   <div class="auth-form">
    <form action="/auth/sign-in" method="POST">
       <label for="username">Username: </label>
       <input type="text" name="username" id="username" />
@@ -15,10 +30,10 @@
       <label for="password">Password: </label>
       <input type="password" name="password" id="password"/>
 
-      <button type="'submit">Sign In</button>
+      <button type="'submit" class="auth-btn">Sign In</button>
 
    </form>
-
+</div>
 
 </body>
 </html>

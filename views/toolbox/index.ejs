@@ -3,22 +3,32 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
    <title>My Toolbox</title>
+   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
    <%- include("../partials/_navbar.ejs") %>
 
-   <h1>My Toolbox</h1>
+   <h1 class="page-title">My Toolbox</h1>
 
-   <ul>
+   <ul class="tools">
       <% userTools.forEach(userTool => { %>
-         <li>
+         <li class="tool-item">
             <a href="/toolbox/myTools/<%= userTool._id %>"><%= userTool.tool.name %></a>
          </li>
       <% }) %>
    </ul>
 
 
-   
+   <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the nearest
+      emergency room
+    </p>
 </body>
 </html>

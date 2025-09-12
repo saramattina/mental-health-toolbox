@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #1e2d2f;
+  background-color: linen;
+  font-family: "Zain", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #987284;
+}
+
+nav {
+   text-align: right;
+   padding: 15px;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+ }
+
+nav img {
+   height: 10vh;
+   border-radius: 8px;
+ }
+
+ .nav-title {
+   display: flex;
+   align-items: center;
+ }
+
+ nav p {
+   padding-left: 20px;
+   font-size: 35px;
+ }
+
+input {
+  background-color: white;
+  font-size: 20px;
+}
+
+nav a {
+  display: inline;
+  margin: 50px 10px;
+  font-size: 20px;
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+.in-case-of-emergency {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.home-page {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.home-img {
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.home-title {
+  font-size: 45px;
+  margin: 20px auto;
+}
+
+.home-subtitle {
+  font-size: 25px;
+}
+
+.page-title {
+  font-size: 65px;
+  align-items: center;
+  margin: 50px auto 60px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-title {
+   align-items: center;
+  margin: 50px auto 60px auto;
+  display: flex;
+  justify-content: center;
+  font-size:45px;
+}
+
+.auth-form {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.auth-btn {
+   margin-left: 25px;
+   font-size: 20px;
+}
+
+form label {
+   margin-left:15px;
+}
+
+.tools {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.tool-item {
+  padding-bottom: 10px;
+  font-size: 27px;
+}
+
+.helpline-title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.helplines {
+  text-align: center;
+  padding: 20px;
+  font-size: 23px;
+  margin-bottom: 100px;
+}
+
+.helplines ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.helplines li {
+  margin: 10px 0;
+}
+
+.helplines a {
+  color: #5b9279;
+  text-decoration: none;
+}
+
+.helplines a:hover {
+ color: #987284
+}
+
+.helpline-name {
+  text-decoration: underline;
+}
+
+.tool-btns {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15%;
+}
+
+.tool-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  width: 55%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.tool-btn,
+.update-btn, .auth-btn {
+  padding: 7px;
+  margin-top: 35px;
+  background-color: #d29074;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+.tool-btn:hover,
+.update-btn:hover, .auth-btn:hover {
+  background-color: #987284;
+  cursor: pointer;
+}
+
+.tool {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+textarea {
+  width: 300px;
+  height: 53px;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.notes {
+  padding-right: 15px;
+  padding-top: 19px;
+}
+
+.edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-notes {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}

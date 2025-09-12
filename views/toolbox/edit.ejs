@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Edit Tool - Toolbox</title>
-</head>
-<body>
-   <%- include("../partials/_navbar.ejs") %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
+    <title>Edit Tool - Toolbox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("../partials/_navbar.ejs") %>
 
-   <h1>Edit <%= userTool.tool.name %></h1>
+    <h1 class="page-title">Edit <%= userTool.tool.name %></h1>
 
-   <h1><%= userTool.tool.name %></h1>
+    <div class="tool">
+      <div class="tool-info">
+        <% if (userTool.tool.description) { %>
+        <p><%= userTool.tool.description %></p>
+        <% } else { %>
+        <p><em>No description available</em></p>
+        <% } %>
 
-    <% if (userTool.tool.description) { %>
-    <p><%= userTool.tool.description %></p>
-    <% } else { %>
-    <p><em>No description available</em></p>
-    <% } %> 
-    
-    <% if (userTool.tool.link) { %>
-    <p>
-      <a href="<%= userTool.tool.link %>" target="_blank">More Info</a>
+        <form action="/toolbox/myTools/<%= userTool._id %>?_method=PUT" method="POST" class="edit-form">
+          <div class="edit-notes">
+          <label for="note" class="notes">Notes:</label>
+          <textarea name="note" id="note" rows="3"><%= userTool.note %></textarea
+          >
+        </div>
+          <button type="submit" class="update-btn">Update</button>
+        </form>
+      </div>
+
+      <div class="tool-btns">
+      <% if (userTool.tool.link) { %>
+      <p>
+        <a href="<%= userTool.tool.link %>" target="_blank"
+          ><button class="tool-btn">More Info</button></a>
+      </p>
+      <% } %> <% if (userTool.tool.reference) { %>
+        <a href="<%= userTool.tool.reference %>" target="_blank"
+          ><button class="tool-btn">Reference</button></a>
+      <% } %>
+    </div>
+    </div>
+
+    <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the
+      nearest emergency room
     </p>
-    <% } %> 
-    
-    <% if (userTool.tool.reference) { %>
-    <a href="<%= userTool.tool.reference %>" target="_blank">Reference</a>
-    <% } %>
-
-
-<form action="/toolbox/myTools/<%= userTool._id %>?_method=PUT" method="POST">
-      <label for="note">Notes:</label>
-      <textarea name="note" id="note" rows="3"><%= userTool.note %></textarea>
-      <button type="submit">Update</button>
-    </form>
-
-
-</body>
+  </body>
 </html>

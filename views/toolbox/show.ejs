@@ -3,42 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
     <title>Toolbox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <%- include("../partials/_navbar.ejs") %>
 
-    <h1><%= userTool.tool.name %></h1>
+    <h1 class="page-title"><%= userTool.tool.name %></h1>
 
+    <div class="tool">
+    <div class="tool-info">
     <% if (userTool.tool.description) { %>
-    <p><%= userTool.tool.description %></p>
+      <p><%= userTool.tool.description %></p>
     <% } else { %>
-    <p><em>No description available</em></p>
-    <% } %> 
-    
-    <% if (userTool.tool.link) { %>
-    <p>
-      <a href="<%= userTool.tool.link %>" target="_blank"><button>More Info</button></a>
-    </p>
-    <% } %> 
-    
-    <% if (userTool.tool.reference) { %>
-    <a href="<%= userTool.tool.reference %>" target="_blank"><button>Reference</button></a>
+      <p><em>No description available</em></p>
     <% } %>
 
     <% if (userTool.note) { %>
       <p>Notes: <%= userTool.note %></p>
       <% } %>
+    </div>
 
+    <div class="tool-btns">
+      <% if (userTool.tool.link) { %>
+      <p>
+        <a href="<%= userTool.tool.link %>" target="_blank"
+          ><button class="tool-btn">More Info</button></a
+        >
+      </p>
+      <% } %>
 
       <a href="/toolbox/myTools/<%= userTool._id %>/edit">
-         <button>Edit Tool</button>
+        <button class="tool-btn">Edit Tool</button>
       </a>
 
- 
-   <form action="/toolbox/myTools/<%= userTool._id %>?_method=DELETE" method="POST">
-         <button type="submit">Remove Tool</button>
+      <form
+        action="/toolbox/myTools/<%= userTool._id %>?_method=DELETE"
+        method="POST">
+        <button type="submit" class="tool-btn">Remove Tool</button>
       </form>
 
+      <% if (userTool.tool.reference) { %>
+      <a href="<%= userTool.tool.reference %>" target="_blank"
+        ><button class="tool-btn">Reference</button></a
+      >
+      <% } %>
+    </div>
+  </div>
+
+   
+
+    <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the
+      nearest emergency room
+    </p>
   </body>
 </html>

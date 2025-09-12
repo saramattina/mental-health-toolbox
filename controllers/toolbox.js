@@ -87,8 +87,6 @@ router.delete("/myTools/:userToolId", async (req, res) => {
       });
 
       await userTool.deleteOne();
-    
-      // await userTool.save();
 
       res.redirect(`/toolbox/myTools`);
 

@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sign Up - Toolbox</title>
-</head>
-<body>
-   <h1>Sign Up For A New Account</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign Up - Toolbox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-title">
+        <img
+          src="https://st4.depositphotos.com/20838724/22972/v/450/depositphotos_229727546-stock-illustration-mental-health-line-icon-outline.jpg"
+          alt="head outline"
+        />
+        <p>MH Toolbox</p>
+      </div>
+    </nav>
 
-   <form action="/auth/sign-up" method="POST">
-      <label for="username">Username: </label>
-      <input type="text" name="username" id="username" />
+    <h1 class="auth-title">Sign Up For A New Account</h1>
 
-      <label for="password">Password: </label>
-      <input type="password" name="password" id="password" />
+    <div class="auth-form">
+      <form action="/auth/sign-up" method="POST">
+         
+          <label for="username">Username: </label>
+          <input type="text" name="username" id="username" />
 
-      <label for="confirmPassword"> Confirm Password: </label>
-      <input type="password" name="confirmPassword" id="confirmPassword" />
+          <label for="password">Password: </label>
+          <input type="password" name="password" id="password" />
 
-      <button type="submit">Sign Up</button>
-   </form>
-</body>
+          <label for="confirmPassword"> Confirm Password: </label>
+          <input type="password" name="confirmPassword" id="confirmPassword" />
+
+        <button type="submit" class="auth-btn">Sign Up</button>
+      </form>
+    </div>
+  </body>
 </html>

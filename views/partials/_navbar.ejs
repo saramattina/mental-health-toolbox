@@ -1,11 +1,20 @@
-<nav>
-   <% if (user) { %>
-      <a href="/toolbox/myTools">My Toolbox</a>
-      <a href="/toolbox">Add Tools</a>
-      <a href="/resources">Resources</a>
-      <a href="/auth/sign-out">Sign Out</a>
-  <% } else { %>
-      <a href="/auth/sign-in">Sign In</a>
-      <a href="/auth/sign-up">Sign Up</a>
-   <% } %>
+<nav class="nav-bar">
+   <div class="nav-title">
+      <a href="/">
+   <img src="https://st4.depositphotos.com/20838724/22972/v/450/depositphotos_229727546-stock-illustration-mental-health-line-icon-outline.jpg" alt="head outline" />
+</a>
+   <p>MH Toolbox</p>
+</div>
+
+  <div class="nav-links">
+    <% if (user) { %>
+    <a href="/toolbox/myTools">My Toolbox</a>
+    <a href="/toolbox">Add Tools</a>
+    <a href="/resources">Resources</a>
+    <a href="/auth/sign-out">Sign Out</a>
+    <% } else { %>
+    <a href="/auth/sign-in">Sign In</a>
+    <a href="/auth/sign-up">Sign Up</a>
+    <% } %>
+  </div>
 </nav>

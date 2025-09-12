@@ -4,7 +4,7 @@ const router = express.Router();
 const UserTool = require("../models/userTool.js");
 const Tool = require("../models/tool.js");
 const User = require("../models/user.js");
-// const Emotion = require("../models/emotion.js");
+const Emotion = require("../models/emotion.js");
 
 router.get("/", async (req, res) => {
    try {
@@ -95,6 +95,38 @@ router.delete("/myTools/:userToolId", async (req, res) => {
       res.redirect("/toolbox/myTools");
    }
 })
+
+router.get("/createTool", (req, res) => {
+   try {
+      res.render("tools/createTool.ejs");
+   } catch (error) {
+      console.log(error);
+      res.redirect("/toolbox");
+   }
+});
+
+router.post("/createTool", async (req, res) => {
+   try {
+  // add isCustom to req.body & create tool
+  req.body.isCustom = true;
+  const newTool = new Tool(req.body);
+  await newTool.save();
+
+  // create object that matches userTool schema (toolId coming from step 1) & add to user toolbox
+      const newCustomTool = new UserTool({
+         user: req.session.user._id,
+         tool: newTool._id,
+      });
+      await newCustomTool.save();
+
+  // redirect to /toolbox/myTools   
+      res.redirect("/toolbox/myTools");
+
+   } catch (error) {
+      console.log(error);
+      res.redirect("/toolbox/myTools");
+   }
+});
 
 router.get("/:toolId", async (req, res) => {
    try {

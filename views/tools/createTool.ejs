@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain&display=swap"
+      rel="stylesheet"
+    />
+    <title>Create Custom Tool - Toolbox</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include("../partials/_navbar.ejs") %>
+
+    <h1 class="page-title">Create A Custom Tool</h1>
+
+    <div class="custom-tool-form">
+    <form action="/toolbox/createTool" method="POST" >
+
+      <!-- name input -->
+       <div class-="form-section">
+      <label for="name">Tool Name:</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+      <!-- description input -->
+       <div class-="form-section" id="create-description">  
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+      ></textarea>
+      </div>
+
+      <!-- link input -->
+      <div class-="form-section">  
+      <label for="link">More Info Link:</label>
+      <input type="url" id="link" name="link" />
+      </div>
+
+      <!-- reference input -->
+      <div class-="form-section">  
+      <label for="reference">Reference Link:</label>
+      <input type="url" id="reference" name="reference" />
+      </div>
+
+      <button type="submit" class="create-tool-btn">Create Tool</button>
+    </form>
+  </div>
+
+    <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the
+      nearest emergency room
+    </p>
+  </body>
+</html>

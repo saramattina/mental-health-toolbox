@@ -16,13 +16,21 @@
     <%- include("../partials/_navbar.ejs") %>
     <h1 class="page-title">Tools</h1>
 
-    <ul class="tools">
-      <% tools.forEach(tool => { %>
+ 
+
+    <div class="tools">
+      <a href="/toolbox/createTool">
+        <button class="create-btn">Create a Custom Tool</button>
+      </a>
+    <ul class="tool-list">
+    <% tools.filter(tool => !tool.isCustom).forEach(tool => { %>
       <li class="tool-item">
         <a href="/toolbox/<%= tool._id %>"><%= tool.name %></a>
       </li>
       <% }) %>
     </ul>
+  </div>
+
     <p class="in-case-of-emergency">
       *If you are experiencing an emergency, please call 911 or go to the nearest
       emergency room

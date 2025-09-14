@@ -9,7 +9,7 @@ const userToolSchema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: "Tool"
    },
-   note: String, 
+   note: String,  
    emotions: [{ type: mongoose.Schema.Types.ObjectId, ref: "Emotion" }],
 })
 

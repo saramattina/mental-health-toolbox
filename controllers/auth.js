@@ -59,8 +59,10 @@ router.post("/sign-in", async (req, res) => {
          _id: userInDatabase._id,
       };
       console.log("User: ", req.session.user);
-      res.redirect("/toolbox/myTools");
-
+      
+      req.session.save(() => {
+         res.redirect("/toolbox/myTools");
+       });
    } catch (error) {
       console.log("Error: ", error);
       res.redirect("/");

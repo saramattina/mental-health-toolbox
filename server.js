@@ -4,6 +4,7 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const methodOverride = require("method-override");
+const MongoStore = require("connect-mongo");
 const path = require("path");
 const morgan = require("morgan");
 
@@ -32,6 +33,9 @@ app.use(
       secret: process.env.SESSION_SECRET,
       resave: false,
       saveUninitialized: true,
+      store: MongoStore.create({
+         mongoUrl: process.env.MONGODB_URI,
+       }),
    })
 );
 

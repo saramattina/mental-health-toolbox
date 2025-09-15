@@ -20,8 +20,19 @@ router.get("/", async (req, res) => {
 router.get("/myTools", async (req, res) => {
    try {
       const userTools = await UserTool.find({ user: req.session.user._id })
-         .populate("tool");
-      res.render("toolbox/index.ejs", { userTools });
+         .populate("tool")
+
+      const sortedUserTools = userTools.sort((a, b) => {
+         const nameA = a.tool.name.toLowerCase();
+         const nameB = b.tool.name.toLowerCase();
+
+         if (nameA < nameB) return -1;
+         if (nameA > nameB) return 1;
+         return 0;
+      });
+      
+      console.log("User Tools: ", userTools);
+      res.render("toolbox/index.ejs", { userTools: sortedUserTools });
    } catch (error) {
       console.log(error);
       res.redirect("/toolbox");

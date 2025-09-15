@@ -54,6 +54,10 @@ app.get("/resources", (req, res) => {
    res.render("resources.ejs");
 })
 
+app.get("/check-in", (req, res) => { 
+   res.render("check-in.ejs");
+});
+
 
 app.use("/auth", authController);
 app.use(isSignedIn);

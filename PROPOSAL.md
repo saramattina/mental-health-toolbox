@@ -19,14 +19,13 @@ A mental health toolbox is a collection of coping strategies to help someone man
 + AAU, I want to be able to add tools to my toolbox
 + AAU, I want to add personal notes to specific tools
 + AAU, I want to be able to edit and/or update tools in my toolbox
-+ AAU, I want to be able to label tools as "helpful" or "unhelpful"
-+ AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
 
 ### Stretch Goals
 + AAU, I want to be able to sort or filter my tools by emotion
 + AAU, I want to be able to favorite tools that are very helpful
 + AAU, if I don't know what I'm feeling, I'd like a guide or some questions to help me identify what I am feeling
 + AAU, I would like to add a custom tool to my toolbox
++ AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
 
 ## Wire Frames
 

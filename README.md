@@ -24,3 +24,5 @@ A mental health toolbox is a collection of coping strategies to help someone man
 
 ## Future Goals
 + AAU, I want to be able to favorite my most used tools
++ AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
++ AAU, I want to be able to filter my toolbox by emotion

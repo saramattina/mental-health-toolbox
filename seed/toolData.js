@@ -43,6 +43,13 @@ const insertData = async () => {
       reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9877284/"
    }, 
    {
+      name: "opposite action",
+      description: "A behavioral strategy that aims to guide one to doing the opposite of the emotion's associated behavioral urge, especially when the emotion may be exaggerated or does not fit the facts of the situation.",
+      link: "https://dbt.tools/emotional_regulation/opposite-action.php",
+      emotions: [],
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6467696/"
+   }, 
+   {
       name: "progressive muscle relaxation",
       description: "A mindful strategy (also known as body scan) that involves tensing and relaxing different muscle groups in the body to release physical tension.",
       link: "https://www.va.gov/WHOLEHEALTHLIBRARY/tools/progressive-muscle-relaxation.asp",

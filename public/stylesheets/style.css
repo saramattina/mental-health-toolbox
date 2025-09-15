@@ -163,7 +163,7 @@ form label {
   margin: 10px 0;
 }
 
-.helplines a {
+.helplines a, .feelings-wheel-link {
   color: #5b9279;
   text-decoration: none;
 }
@@ -300,4 +300,21 @@ textarea {
   display: flex;
   align-items: center;
   margin-top: 20px;
+}
+
+.step-name {
+  text-align: center;
+  font-size: 28px;
+}
+
+.check-in-desc {
+  text-align: center;
+  margin: auto 100px;
+  font-size: 20px;
+  padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+.step {
+  margin: 50px auto 100px auto;
 }

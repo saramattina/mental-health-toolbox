@@ -22,6 +22,13 @@ const insertData = async () => {
       reference: "https://journals.sagepub.com/doi/10.2466/pr0.94.3.1009-1014?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed"
    }, 
    {
+      name: "assertive communication",
+      description: "A communication strategy that aims to help you express your thoughts, feelings, and needs in a clear, direct, and respectful way, while also respecting the thoughts, feelings and needs of the other person/people.",
+      link: "https://positivepsychology.com/assertiveness-training/",
+      emotions: [],
+      reference: "https://www.sciencedirect.com/science/article/pii/S1877042810022317"
+   }, 
+   {
       name: "consequential thinking",
       description: "A cognitive strategy that aims to reduce impulsive behavior by thinking through the potential consequences of your actions before you act.",
       link: "https://alyceum.com.au/the-6-second-secret/",
@@ -41,6 +48,20 @@ const insertData = async () => {
       link: "https://www.healthline.com/health/breathing-exercise#humming-bee-breath",
       emotions: [],
       reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9877284/"
+   }, 
+   {
+      name: "gratitude journal",
+      description: "A cognitive and mindful strategy that involves acknowledging or writing down things you are grateful for to help shift your focus to the positive aspects of your life.",
+      link: "https://dayoneapp.com/blog/gratitude-journal/",
+      emotions: [],
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10393216/"
+   }, 
+   {
+      name: "meditation",
+      description: "A mindful strategy that involves focusing your attention on a specific object, thought, or activity to help achieve a mentally clear and emotionally calm state. There are many types of meditation, including guided meditation, loving-kindness meditation, visualization, etc...",
+      link: "https://www.mayoclinic.org/tests-procedures/meditation/in-depth/meditation/art-20045858",
+      emotions: [],
+      reference: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10355843/"
    }, 
    {
       name: "opposite action",

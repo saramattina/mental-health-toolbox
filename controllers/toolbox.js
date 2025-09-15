@@ -30,8 +30,7 @@ router.get("/myTools", async (req, res) => {
          if (nameA > nameB) return 1;
          return 0;
       });
-      
-      console.log("User Tools: ", userTools);
+
       res.render("toolbox/index.ejs", { userTools: sortedUserTools });
    } catch (error) {
       console.log(error);

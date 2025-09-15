@@ -20,11 +20,9 @@ router.get("/sign-out", (req, res) => {
 
 router.post("/sign-up", async (req, res) => {
    try {
-      console.log("Yooooooo")
       const userInDatabase = await User.findOne({ username: req.body.username});
       if (userInDatabase) {
          return res.send("Username is already taken. Please try again.");
-         // maybe need to redirect here ?
       }
 
       const hashedPassword = bcrypt.hashSync(req.body.password, 10);

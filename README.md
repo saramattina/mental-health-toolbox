@@ -2,10 +2,9 @@
 
 ![landing page](https://i.imgur.com/iIKwB7g_d.png?maxwidth=520&shape=thumb&fidelity=high)
 
-
 ## MH Toolbox Description
 
-A mental health toolbox is a collection of coping strategies to help someone manage their mental health. The goal of this app is to allow users to have their toolbox in one central location, rather than trying to remember what tools (coping strategies) are helpful for the user. 
+A mental health toolbox is a collection of coping strategies to help someone manage their mental health. The goal of this app is to allow users to have their toolbox in one central location, rather than trying to remember what tools (coping strategies) are helpful for the user.
 
 ## Installations & Getting Started
 
@@ -13,7 +12,7 @@ A mental health toolbox is a collection of coping strategies to help someone man
 
 1. Install dependencies
 
-Navigate into cloned repository and install the necessary dependencies by running: 
+Navigate into cloned repository and install the necessary dependencies by running:
 
 ```
 npm install
@@ -22,17 +21,17 @@ npm install
 3. Have fun with it!
 
 ## Deployed Link
-[MH Toolbox](https://mhtoolbox.up.railway.app/)
 
+[MH Toolbox](https://mhtoolbox.up.railway.app/)
 
 ## Technologies Used
 
-+ EJS
-+ CSS
-+ JavaScript
-
+- EJS
+- CSS
+- JavaScript
 
 ## Future Goals
-+ AAU, I want to be able to favorite my most used tools
-+ AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
-+ AAU, I want to be able to filter my toolbox by emotion
+
+- AAU, I want to be able to favorite my most used tools
+- AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
+- AAU, I want to be able to filter my toolbox by emotion

@@ -17,35 +17,36 @@
 
     <h1 class="page-title"><%= tool.name %></h1>
 
-
     <div class="tool">
       <div class="tool-info">
-    <% if (tool.description) { %>
-    <p><%= tool.description %></p>
-    <% } else { %>
-    <p><em>No description available</em></p>
-    <% } %> <% if (tool.link) { %>
+        <% if (tool.description) { %>
+        <p><%= tool.description %></p>
+        <% } else { %>
+        <p><em>No description available</em></p>
+        <% } %> <% if (tool.link) { %>
+      </div>
+
+      <div class="tool-btns">
+        <p>
+          <a href="<%= tool.link %>" target="_blank"
+            ><button class="tool-btn">More Info</button></a
+          >
+        </p>
+        <% } %> <% if (tool.reference) { %>
+        <a href="<%= tool.reference %>" target="_blank"
+          ><button class="tool-btn">Reference</button></a
+        >
+        <% } %>
+
+        <form action="/toolbox/<%= tool._id %>" method="POST">
+          <button type="submit" class="tool-btn">Add to My Toolbox</button>
+        </form>
+      </div>
     </div>
 
-    <div class="tool-btns">
-    <p>
-      <a href="<%= tool.link %>" target="_blank"><button class="tool-btn">More Info</button></a>
+    <p class="in-case-of-emergency">
+      *If you are experiencing an emergency, please call 911 or go to the
+      nearest emergency room
     </p>
-    <% } %> <% if (tool.reference) { %>
-    <a href="<%= tool.reference %>" target="_blank"><button class="tool-btn">Reference</button></a>
-    <% } %>
-
-    <form action="/toolbox/<%= tool._id %>" method="POST">
-      <button type="submit" class="tool-btn">Add to My Toolbox</button>
-   </form>
-  </div>
-
-  </div>
-
-   <p class="in-case-of-emergency">
-    *If you are experiencing an emergency, please call 911 or go to the nearest
-    emergency room
-  </p>
-
   </body>
 </html>

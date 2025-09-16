@@ -18,39 +18,34 @@
     <h1 class="page-title">Create A Custom Tool</h1>
 
     <div class="custom-tool-form">
-    <form action="/toolbox/createTool" method="POST" >
+      <form action="/toolbox/createTool" method="POST">
+        <!-- name input -->
+        <div class-="form-section">
+          <label for="name">Tool Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
 
-      <!-- name input -->
-       <div class-="form-section">
-      <label for="name">Tool Name:</label>
-      <input type="text" id="name" name="name" required />
+        <!-- description input -->
+        <div class-="form-section" id="create-description">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+
+        <!-- link input -->
+        <div class-="form-section">
+          <label for="link">More Info Link:</label>
+          <input type="url" id="link" name="link" />
+        </div>
+
+        <!-- reference input -->
+        <div class-="form-section">
+          <label for="reference">Reference Link:</label>
+          <input type="url" id="reference" name="reference" />
+        </div>
+
+        <button type="submit" class="create-tool-btn">Create Tool</button>
+      </form>
     </div>
-
-      <!-- description input -->
-       <div class-="form-section" id="create-description">  
-      <label for="description">Description:</label>
-      <textarea
-        id="description"
-        name="description"
-        rows="4"
-      ></textarea>
-      </div>
-
-      <!-- link input -->
-      <div class-="form-section">  
-      <label for="link">More Info Link:</label>
-      <input type="url" id="link" name="link" />
-      </div>
-
-      <!-- reference input -->
-      <div class-="form-section">  
-      <label for="reference">Reference Link:</label>
-      <input type="url" id="reference" name="reference" />
-      </div>
-
-      <button type="submit" class="create-tool-btn">Create Tool</button>
-    </form>
-  </div>
 
     <p class="in-case-of-emergency">
       *If you are experiencing an emergency, please call 911 or go to the

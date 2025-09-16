@@ -6,7 +6,7 @@
 
 A mental health toolbox is a collection of coping strategies to help someone manage their mental health. The goal of this app is to allow users to have their toolbox in one central location, rather than trying to remember what tools (coping strategies) are helpful for the user.
 
-## Installations & Getting Started
+## Installations
 
 1. Fork and clone this repository
 
@@ -35,3 +35,6 @@ npm install
 - AAU, I want to be able to favorite my most used tools
 - AAU, I want to be able to tag emotions to tools, so I can better remember which tools help with what emotions
 - AAU, I want to be able to filter my toolbox by emotion
+- Add styling for easier cell phone use
+- Add a blog page with articles that go more in depth about mental health topics
+- Add to feelings wheel to make it more comprehensive 

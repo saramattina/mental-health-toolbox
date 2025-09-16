@@ -7,8 +7,22 @@
 
 A mental health toolbox is a collection of coping strategies to help someone manage their mental health. The goal of this app is to allow users to have their toolbox in one central location, rather than trying to remember what tools (coping strategies) are helpful for the user. 
 
-<!-- getting started: link to deployed app -->
+## Installations & Getting Started
+
+1. Fork and clone this repository
+
+1. Install dependencies
+
+Navigate into cloned repository and install the necessary dependencies by running: 
+
+```
+npm install
+```
+
+3. Have fun with it!
+
 ## Deployed Link
+[MH Toolbox](https://mhtoolbox.up.railway.app/)
 
 
 ## Technologies Used
@@ -16,10 +30,6 @@ A mental health toolbox is a collection of coping strategies to help someone man
 + EJS
 + CSS
 + JavaScript
-+ NPM
-+ Node
-+ MongoDB
-+ Mongoose
 
 
 ## Future Goals

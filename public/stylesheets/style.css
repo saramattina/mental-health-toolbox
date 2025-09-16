@@ -318,3 +318,10 @@ textarea {
 .step {
   margin: 50px auto 100px auto;
 }
+
+.wheel-img {
+  border-radius: 75px;
+    width: 950px;
+    align-items: center;
+    margin: 50px 100px;
+}
